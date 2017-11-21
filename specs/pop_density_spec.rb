@@ -1,5 +1,6 @@
 require("minitest/autorun")
 require_relative("../pop_density")
+include Math
 
 class PopDensityTest < MiniTest::Test
 
@@ -65,17 +66,24 @@ class PopDensityTest < MiniTest::Test
 
  #Given the length of a side of a cube calculate the volume
  def test_volume_of_cube()
-   #add test code here
+  volume_of_cube2 = volume_of_cube(2)
+  volume_of_cube3 = volume_of_cube(3)
+  assert_equal(8, volume_of_cube2)
+  assert_equal(27, volume_of_cube3)
  end
 
  #Given the radius of a sphere calculate the volume
  def test_volume_of_sphere()
-   #add test code here
+   volume_of_sphere_6 = volume_of_sphere(6.0).round(2)
+   volume_of_sphere_10 = volume_of_sphere(10.0).round(2)
+   assert_equal(volume_of_sphere_6, 904.78)
+   assert_equal(volume_of_sphere_10, 4188.79)
  end
 
  #Given a value in farenheit, convert this into celsius.
  def test_fahrenheit_to_celsius()
-   #add test code here
- end
- 
+   fahrenheit_to_celsius_t1 = fahrenheit_to_celsius(100)
+   assert_equal(fahrenheit_to_celsius_t1, 37)
+end
+
 end
