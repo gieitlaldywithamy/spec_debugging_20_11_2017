@@ -50,3 +50,25 @@ def number_to_short_month_name(int)
   end
 
 end
+
+#Given the length of a side of a cube calculate the volume
+def volume_of_cube(side_length)
+  return side_length*side_length*side_length
+  #add test code here
+end
+
+#Given the radius of a sphere calculate the volume
+def volume_of_sphere(radius)
+
+
+  return (Math::PI * 4/3) * (radius ** 3)
+
+
+end
+
+#Given a value in farenheit, convert this into celsius.
+def fahrenheit_to_celsius(fahrenheit)
+
+  return(((fahrenheit-32)*5)/9)
+
+end
